@@ -1,0 +1,17 @@
+@import "vars";
+@import "reset";
+@import "form";
+
+.layout {
+  min-height: 100vh;
+  padding-inline: var(--pageSide);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  & > :is(header, footer) {
+    margin-inline: calc(var(--pageSide) * -1);
+    padding: var(--space-16) var(--pageSide);
+    background: var(--clr-primary);
+    color: var(--clr-white);
+  }
+}
